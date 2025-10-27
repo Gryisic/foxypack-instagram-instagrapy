@@ -1,11 +1,11 @@
 [project]
 name = "foxypack-instagram-instagrapy"
-version = "0.0.1"
+version = "0.0.2"
 description = "Default template for PDM package"
 authors = [
     {name = "", email = "shapranov.work@gmail.com"},
 ]
-dependencies = ["foxypack>=0.0.4", "instagrapi==2.2.1"]
+dependencies = ["foxypack>=0.0.7", "instagrapi==2.2.1", "pandas>=2.3.3", "openpyxl>=3.1.5"]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}

@@ -4,6 +4,8 @@ import uuid
 from enum import Enum
 from dataclasses import dataclass
 
+from foxypack.exceptions import DenialAsynchronousService
+from foxypack.foxypack_abc.foxystat import AnalysisType, StatisticsType
 from instagrapi import Client
 from foxypack.entitys.balancers import BaseEntityBalancer
 from foxypack.entitys.pool import EntityPool
@@ -168,6 +170,6 @@ class FoxyInstagramStat(FoxyStat):
         return None
 
     async def get_stat_async(
-        self, answers_analysis: InstagramAnswersAnalysis
-    ) -> AnswersStatistics | None:
-        pass
+        self, answers_analysis: AnalysisType
+    ) -> StatisticsType | None:
+        raise DenialAsynchronousService(FoxyStat)
